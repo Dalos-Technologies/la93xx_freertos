@@ -504,6 +504,7 @@ bbdev_ipc_init(uint8_t dev_id, uint8_t core_id)
 	instance->initialized = i;
 
 	SET_HIF_MOD_RDY( pLa9310Info->pHif, LA9310_HIF_MOD_READY_IPC_LIB );
+	bbdev_ipc_signal_ready(0);
 	log_info( "IPC on modem ready\n\r" );
 
 	return 0;
